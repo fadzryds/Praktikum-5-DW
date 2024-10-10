@@ -1,0 +1,145 @@
+/* Gaya dasar untuk body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f3f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: url('tampilan.jpg') no-repeat center center/cover;
+}
+
+/* Gaya untuk header */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.8rem;
+    color: #34495e;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+}
+
+/* Kontainer form dengan efek blur */
+#session-container, #form-tambah-buku {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 20px;
+    width: 350px;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparan dengan blur */
+    border-radius: 20px;
+    backdrop-filter: blur(10px); /* Efek blur */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Input dan textarea dengan background blur */
+#session-container input, #form-tambah-buku input {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 30px; /* Lebih oval */
+    border: none;
+    margin-bottom: 15px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Efek transparansi */
+    color: #34495e;
+    outline: none;
+}
+
+#session-container input:focus, #form-tambah-buku input:focus {
+    background-color: rgba(255, 255, 255, 0.8); /* Mengurangi transparansi saat fokus */
+}
+
+/* Tombol dengan gradasi dan oval */
+#session-container button, #form-tambah-buku button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background: linear-gradient(45deg, #2ecc71, #27ae60); /* Gradasi hijau */
+    color: white;
+    border: none;
+    border-radius: 30px; /* Tombol oval */
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#session-container button:hover, #form-tambah-buku button:hover {
+    background: linear-gradient(45deg, #27ae60, #2ecc71); /* Gradasi saat hover */
+    transform: scale(1.05); /* Efek memperbesar saat hover */
+}
+
+#salamPengguna {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #2980b9;
+    text-align: center;
+}
+
+/* Gaya untuk daftar buku dan buku favorit */
+#daftar-buku, #buku-favorit {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+/* Gaya untuk kotak buku */
+.buku {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #dcdde1;
+} 
+
+.buku:last-child {
+    border-bottom: none;
+}
+
+.buku p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.buku button {
+    padding: 7px 15px;
+    font-size: 0.9rem;
+    background: linear-gradient(45deg, #e74c3c, #c0392b); /* Gradasi merah */
+    color: white;
+    border: none;
+    border-radius: 30px; /* Tombol oval */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buku button:hover {
+    background: linear-gradient(45deg, #c0392b, #e74c3c); /* Gradasi saat hover */
+    transform: scale(1.05);
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    #session-container, #form-tambah-buku {
+        width: 90%;
+    }
+
+    .buku {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .buku button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
